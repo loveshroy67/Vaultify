@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://be5997ef-0d23-4410-b5cc-e4f118639f3a.deployment.aimpact.dev/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" type="image/svg+xml" href="https://be5997ef-0d23-4410-b5cc-e4f118639f3a.deployment.aimpact.dev/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite + React + TS</title>
+    <script type="module" crossorigin="" src="./Vaultify_files/index-CXcHU3b6.js.download"></script>
+    <link rel="stylesheet" crossorigin="" href="./Vaultify_files/index-BpkMqfmI.css">
+  <script>// This script is responsible for notifying the Aimpact editor about important events such as runtime errors
+// or preview loading.
+// This file will be automatically excluded from the production build.
+// DO NOT MODIFY THIS FILE. ANY CHANGES WILL BE OVERWRITTEN.
+(function() {
+
+  function reportError(data) {
+    //Send error data to other tabs via BroadcastChannel
+    window.parent?.postMessage({ type: 'AIMPACT_RUNTIME_ERROR', data}, "https://aimpact.dev");
+    window.opener?.postMessage({ type: 'AIMPACT_RUNTIME_ERROR', data}, "https://aimpact.dev");
+    //Send error data to the server
+    fetch('/__runtime_error__', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+  }
+
+  function notifyPreviewLoaded() {
+    window.parent?.postMessage({ type: 'AIMPACT_PREVIEW_LOADED' }, "https://aimpact.dev");
+    window.opener?.postMessage({ type: 'AIMPACT_PREVIEW_LOADED' }, "https://aimpact.dev");
+  }
+
+  window.addEventListener('load', notifyPreviewLoaded);
+
+  window.onerror = function(message, source, lineno, colno, error) {
+    reportError({
+      type: 'error',
+      message,
+      source,
+      lineno,
+      colno,
+      stack: error && error.stack,
+      userAgent: navigator.userAgent,
+      url: location.href,
+    });
+  };
+
+  window.addEventListener('unhandledrejection', function(event) {
+    reportError({
+      type: 'unhandledrejection',
+      reason: event.reason,
+      userAgent: navigator.userAgent,
+      url: location.href,
+    });
+  });
+})();
+</script></head>
+  <body>
+    <div id="root"><div class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><header class="border-b border-white/10 backdrop-blur-sm bg-black/20"><div class="container mx-auto px-4 py-4 flex justify-between items-center"><div class="flex items-center gap-2"><div class="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg></div><h1 class="text-2xl font-bold text-white">Vaultify</h1></div><div class="wallet-adapter-dropdown"><button class="wallet-adapter-button wallet-adapter-button-trigger" tabindex="0" type="button" style="pointer-events: auto;">Select Wallet</button><ul aria-label="dropdown-list" class="wallet-adapter-dropdown-list false" role="menu"><li class="wallet-adapter-dropdown-list-item" role="menuitem">Change wallet</li></ul></div></div></header><main><div class="container mx-auto px-4 py-20"><div class="max-w-4xl mx-auto text-center"><h2 class="text-5xl font-bold text-white mb-6">Your Data. Your Vault. Your Control.</h2><p class="text-xl text-gray-300 mb-12">Store personal data privately with military-grade encryption, logged immutably on Solana blockchain.</p><div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16"><div class="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-purple-500/50 transition-all"><div class="text-purple-400 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock w-8 h-8" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div><h3 class="text-lg font-semibold text-white mb-2">Encrypted</h3><p class="text-sm text-gray-400">End-to-end encryption ensures only you can access your data</p></div><div class="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-purple-500/50 transition-all"><div class="text-purple-400 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-8 h-8" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg></div><h3 class="text-lg font-semibold text-white mb-2">Decentralized</h3><p class="text-sm text-gray-400">Data stored on Solana blockchain, no central authority</p></div><div class="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-purple-500/50 transition-all"><div class="text-purple-400 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database w-8 h-8" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg></div><h3 class="text-lg font-semibold text-white mb-2">Organized</h3><p class="text-sm text-gray-400">Categorize health, fitness, journaling, and more</p></div><div class="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-purple-500/50 transition-all"><div class="text-purple-400 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-8 h-8" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg></div><h3 class="text-lg font-semibold text-white mb-2">Fast</h3><p class="text-sm text-gray-400">Lightning-fast access powered by Solana</p></div></div><div class="mt-16 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10"><h3 class="text-2xl font-bold text-white mb-4">Get Started</h3><p class="text-gray-300 mb-6">Connect your Solana wallet to create your secure vault and start storing your personal data.</p><div class="text-purple-400 font-semibold">👆 Click "Select Wallet" above to begin</div></div></div></div></main><footer class="border-t border-white/10 backdrop-blur-sm bg-black/20 py-6 mt-20"><div class="container mx-auto px-4 text-center text-gray-400 text-sm">© 2025. Made using <span class="text-purple-500 font-semibold">AImpact</span></div></footer></div></div>
+  <script defer="" src="./Vaultify_files/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;9c5a558c9621406786d789941699095f&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+</body></html>
